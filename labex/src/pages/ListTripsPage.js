@@ -1,15 +1,18 @@
 import React from "react";
-import axios from "axios"
+import axios from "axios";
+import { useHistory } from 'react-router-dom';
 
-export const ListTripsPage = () => {
-const getTrips = () => {
-    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips",
-    {headers: nayara-pinheiro-labenu}
-    )
-    .then((res) => (res.data))
-    .catch((err) => alert(err.response.data.message))
+const ListTripsPage = () => {
+    const history = useHistory()
 
-}
+// const getTrips = () => {
+//     axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips",
+//     {headers: nayara-pinheiro-labenu}
+//     )
+//     .then((res) => (res.data))
+//     .catch((err) => alert(err.response.data.message))
+
+// }
 
 
     return(
@@ -18,3 +21,5 @@ const getTrips = () => {
         </>
     )
 }
+
+export default ListTripsPage;
