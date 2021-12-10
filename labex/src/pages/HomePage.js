@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
-import { goToListTripsPage } from "../routes/goTo";
+import { goToListTripsPage, goToLoginPage } from "../routes/goTo";
 
 const HomePage = () => {
     const history = useHistory()
@@ -9,7 +9,7 @@ const HomePage = () => {
         <>
         <h1>LABEX</h1>
         <button onClick={() => goToListTripsPage(history)} >Ver Viagens</button>
-        <button>Área Adm</button>
+        <button onClick={() => goToLoginPage(history)} >Área Adm</button>
         </>
     )
 }
