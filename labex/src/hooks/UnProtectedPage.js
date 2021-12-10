@@ -2,7 +2,7 @@ import { useLayoutEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { goToAdminHomePage } from "../routes/goTo"
 
-const useUnprotectedPage = () => {
+const UnprotectedPage = () => {
     const history = useHistory()
 
     useLayoutEffect(() => {
@@ -14,4 +14,4 @@ const useUnprotectedPage = () => {
 
 }
 
-export default useUnprotectedPage;
+export default UnprotectedPage;

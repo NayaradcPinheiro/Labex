@@ -1,8 +1,8 @@
 import { useLayoutEffect } from "react"
 import { useHistory } from "react-router-dom"
-import { goToLoginPage } from "../routes/coordinator"
+import { goToLoginPage } from "../routes/goTo"
 
-const useProtectedPage = () => {
+const ProtectedPage = () => {
     const history = useHistory()
 
     useLayoutEffect(() => {
@@ -14,4 +14,4 @@ const useProtectedPage = () => {
 
 }
 
-export default useProtectedPage
+export default ProtectedPage
