@@ -2,14 +2,14 @@ import React from "react";
 import { useHistory } from 'react-router-dom';
 import useRequestData from "../hooks/useRequestData";
 import { goToHomePage, goToApplicationFormPage } from "../routes/goTo"
-import CardTrip from "../componentes/CardTrip";
+import CardTrip from "../componentes/CardTrip"
 
 const ListTripsPage = () => {
     const history = useHistory()
     const [tripsData] = useRequestData("/trips",{})
 
     const tripsList = tripsData.trips && tripsData.trips.map((t) => {
-        return<CardTrip key={t} trip={t}/>
+        return<CardTrip key={t.id} trip={t}/>
     })
 
     return(
