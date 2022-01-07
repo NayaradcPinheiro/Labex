@@ -14,6 +14,7 @@ const useRequestData = (endpoint, inicialState) => {
             }
         })
         .then((res) => setData(res.data))
+        
         .catch((err) => alert(err.response.data.message))
     }
     
